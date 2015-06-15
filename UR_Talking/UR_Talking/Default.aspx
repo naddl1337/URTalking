@@ -30,4 +30,8 @@
         </li>
         <asp:Button runat="server" CommandName="Submit" Text="Chat!" />
     </ol>
+      <ul id="chatHistory" style="list-style: none"></ul>
+    <input type="search"/>
+    <button type="submit">ok</button>
+<script src="Scripts/questionHandler.js"></script>
 </asp:Content>
