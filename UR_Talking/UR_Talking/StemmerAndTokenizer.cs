@@ -13,23 +13,20 @@ namespace Iveonik.Stemmers
     {
         static void Main(string[] args)
         {
-            iveonikStemmer(new GermanStemmer());
             Console.ReadKey();
         }
 
-        private static void iveonikStemmer(IStemmer stemmer)
+        public static String[] stemAndTokenize(IStemmer stemmer, String userInput)
         {
-            while (true)
-            {
-                String userInput = Console.ReadLine();
                 String[] userInputAsArray = userInput.Split();
                 char[] delimiterChars = { ' ', ',', '.', ':', '\t' };
-                foreach (string word in userInputAsArray)
+                for(int i = 0; i < userInputAsArray.Length; i++)
                 {
-                    String stemmedWord = stemmer.Stem(CleanInput(word));
-                    Console.WriteLine("Stemmed: " + stemmedWord);
+                    String newWord = stemmer.Stem(CleanInput(userInputAsArray[i]));
+                    userInputAsArray[i] = newWord;
+                    Console.WriteLine("Stemmed: " + newWord);
                 }
-            }
+            return userInputAsArray;
         }
 
         static string CleanInput(string strIn)
