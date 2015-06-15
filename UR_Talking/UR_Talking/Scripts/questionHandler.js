@@ -25,6 +25,7 @@
     renderAnswer = function (answer) {
         var answerLi = $('<li><strong>' + "Elise: " + '</strong>' + answer + '</li>');
         $('#chatHistory').append(answerLi);
+        $('input[type=search]').val("");
     },
     renderQuestion = function (question) {
         var user = $('<strong>Du: </strong>'),
