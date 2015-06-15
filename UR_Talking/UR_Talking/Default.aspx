@@ -18,7 +18,7 @@
     </section>
 </asp:Content>
 <asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="MainContent">
-    <h3>Chatverlauf:</h3>
+    <%--<h3>Chatverlauf:</h3>
     <ol class="round">
         <li class="one">
             
@@ -29,8 +29,12 @@
             <asp:RequiredFieldValidator runat="server" ControlToValidate="UserName" CssClass="field-validation-error" ErrorMessage="Du musst Elise schon etwas fragen..." />
         </li>
         <asp:Button runat="server" CommandName="Submit" Text="Chat!" />
-    </ol>
-      <ul id="chatHistory" style="list-style: none"></ul>
+    </ol>--%>
+    <div class="chat">
+        <ul id="chatHistory" style="list-style: none">
+            <li><b>Elise: </b>Na süßer, wie gehts dir?</li>
+        </ul>
+    </div>
     <input type="search"/>
     <button type="submit">ok</button>
 <script src="Scripts/questionHandler.js"></script>
