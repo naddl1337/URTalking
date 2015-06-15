@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using System.Web.Http;
 using System.Web.Optimization;
 using System.Web.Routing;
 using System.Web.Security;
@@ -17,7 +16,6 @@ namespace UR_Talking
             // Code, der beim Anwendungsstart ausgeführt wird
             BundleConfig.RegisterBundles(BundleTable.Bundles);
             AuthConfig.RegisterOpenAuth();
-            App_Start.WebApiConfig.Register(GlobalConfiguration.Configuration);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
         }
 
