@@ -17,13 +17,14 @@
         });
     },
     onAnswerSuccess = function (response) {
+
         renderAnswer(response);
     },
     onAnswerError = function (err) {
         console.log(err);
     },
     renderAnswer = function (answer) {
-        var answerLi = $('<li><strong>' + "Elise: " + '</strong>' + answer + '</li>');
+        var answerLi = $('<li><strong>' + "Elise: " + '</strong>' + answer.toString() + '</li>');
         $('#chatHistory').append(answerLi);
         $('input[type=search]').val("");
     },
