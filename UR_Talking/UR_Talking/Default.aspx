@@ -32,7 +32,7 @@
     </ol>--%>
     <div class="chat">
         <ul id="chatHistory" style="list-style: none">
-            <li><b>Elise: </b>Na süßer, wie gehts dir?</li>
+            <li><b>Elise: </b>Na süßer, wie gehts dir? ... lol :D</li>
         </ul>
     </div>
     <input type="search"/>
