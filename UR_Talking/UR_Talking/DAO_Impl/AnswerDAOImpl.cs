@@ -8,9 +8,17 @@ namespace UR_Talking.DAO_Impl
 {
     public class AnswerDAOImpl : AnswerDAO
     {
+        private TestRequest tr;
+
+        public AnswerDAOImpl()
+        {
+            tr = new TestRequest();
+        }
+
         public string GetAnswer(string[] question)
         {
-            return this.ToString();
+            return tr.matchRequest(question);
         }
+
     }
 }

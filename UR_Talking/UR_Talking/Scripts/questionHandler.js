@@ -3,9 +3,12 @@
 
     ev.preventDefault();
 
-    renderQuestion(input);
-    sendQuestion(input);
-    
+    if(input){
+        renderQuestion(input);
+        sendQuestion(input);
+    } else {
+        alert("Gib etwas ein!!");
+    }
 },
     sendQuestion = function (question) {
         $.ajax({
