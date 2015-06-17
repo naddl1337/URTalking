@@ -18,14 +18,23 @@ namespace Iveonik.Stemmers
 
         public static String[] stemAndTokenize(IStemmer stemmer, String userInput)
         {
-                String[] userInputAsArray = userInput.Split();
+            String[] userInputAsArray = null;
+
+            try
+            {
+                userInputAsArray = userInput.Split();
                 char[] delimiterChars = { ' ', ',', '.', ':', '\t' };
-                for(int i = 0; i < userInputAsArray.Length; i++)
+                for (int i = 0; i < userInputAsArray.Length; i++)
                 {
                     String newWord = stemmer.Stem(CleanInput(userInputAsArray[i]));
                     userInputAsArray[i] = newWord;
                     Console.WriteLine("Stemmed: " + newWord);
                 }
+            }
+
+            catch (Exception e) {
+                Console.WriteLine("receive empty String ", e.Source);
+            }
             return userInputAsArray;
         }
 
