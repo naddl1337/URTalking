@@ -23,10 +23,11 @@ namespace UR_Talking
         }
 
         // POST api/<controller>
-        public string[] Post([FromBody]string value)
+        public string Post([FromBody]string value)
         {
             String [] request = StemmerAndTokenizer.stemAndTokenize(new GermanStemmer(), value);
-            return request;
+            TestRequest tr = new TestRequest(request);
+            return tr.matchRequest();
         }
 
         // PUT api/<controller>/5

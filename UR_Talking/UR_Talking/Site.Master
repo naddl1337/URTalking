@@ -47,12 +47,12 @@
             <div class="float-right">
                 <section id="login">
                     <asp:LoginView runat="server" ViewStateMode="Disabled">
-                        <AnonymousTemplate>
+                        <%--<AnonymousTemplate>
                             <ul>
                                 <li><a id="registerLink" runat="server" href="~/Account/Register">Registrieren</a></li>
                                 <li><a id="loginLink" runat="server" href="~/Account/Login">Anmelden</a></li>
                             </ul>
-                        </AnonymousTemplate>
+                        </AnonymousTemplate>--%>
                         <LoggedInTemplate>
                             <p>
                                 Hello, <a runat="server" class="username" href="~/Account/Manage" title="Manage your account">

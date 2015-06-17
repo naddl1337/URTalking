@@ -346,6 +346,7 @@
       <DependentUpon>Site.Mobile.Master</DependentUpon>
     </Compile>
     <Compile Include="StemmerAndTokenizer.cs" />
+    <Compile Include="TestRequest.cs" />
     <Compile Include="ValuesController.cs" />
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
