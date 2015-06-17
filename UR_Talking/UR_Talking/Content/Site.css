@@ -48,6 +48,7 @@ mark {
 
 .float-right {
     float: right;
+    margin-top: 52px;
 }
 
 .clear-fix:after {
@@ -104,13 +105,13 @@ h5, h6 {
 }
 
     .main-content {
-        background: url("../Images/accent.png") no-repeat;
+        /*background: url("../Images/accent.png") no-repeat;*/
         padding-left: 10px;
         padding-top: 30px;
     }
 
     .featured + .main-content {
-        background: url("../Images/heroAccent.png") no-repeat;
+        /*background: url("../Images/heroAccent.png") no-repeat;*/
     }
 
 header .content-wrapper {
@@ -124,12 +125,31 @@ footer {
     height: 100px;
 }
 
-.chat {
+.chat_box {
+    position: relative;
     height: 150px;
     width: 100%;
     overflow: hidden;
     overflow-y: scroll;
     margin-bottom: 10px;
+}
+
+.chat_box ul {
+	position: relative;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.chat_box ul li {
+	position: relative;
+	margin: 0 !important;
+	padding: 0 !important;
+	
+}
+
+.invisible {
+    display: none;
 }
 
 

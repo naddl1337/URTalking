@@ -4,6 +4,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using Iveonik.Stemmers;
 
 namespace UR_Talking
 {
@@ -24,7 +25,9 @@ namespace UR_Talking
         // POST api/<controller>
         public string Post([FromBody]string value)
         {
-            return "Antwort " + value;
+            String [] request = StemmerAndTokenizer.stemAndTokenize(new GermanStemmer(), value);
+            TestRequest tr = new TestRequest(request);
+            return tr.matchRequest();
         }
 
         // PUT api/<controller>/5
